@@ -1,0 +1,14 @@
+{
+  "name": "oas",
+  "version": "1.0.0",
+  "description": "Drug use regulation",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Viktor Zavala",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^10.0.0"
+  }
+}
