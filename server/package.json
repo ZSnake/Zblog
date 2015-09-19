@@ -1,6 +1,6 @@
 {
-  "name": "oas",
-  "version": "1.0.0",
+  "name": "ZBlog",
+  "version": "0.0.1",
   "description": "Drug use regulation",
   "main": "server.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Viktor Zavala",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^10.0.0"
+    "hapi": "^10.0.0",
+    "inert": "^3.0.1"
   }
 }
