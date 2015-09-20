@@ -17,7 +17,10 @@
   ],
   "dependencies": {
     "angular": "~1.4.6",
+    "angular-momentjs": "~0.2.2",
+    "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
-    "bootstrap-css": "~3.3.4"
+    "bootstrap-css": "~3.3.4",
+    "moment": "~2.10.6"
   }
 }

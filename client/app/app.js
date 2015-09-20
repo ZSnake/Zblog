@@ -1,9 +1,11 @@
-angular.module('Zblog', ['ngRoute'])
+angular.module('Zblog', ['ui.router', 'angular-moment'])
  
 // Declared route 
-.config(['$routeProvider', function($routeProvider) {
-$routeProvider.when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'HomeController'
-    });
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: '/views/home.html',
+            controller: 'HomeController'
+        })
 }])
