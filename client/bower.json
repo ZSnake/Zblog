@@ -1,28 +1,23 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "Zblog",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ZSnake/Zblog",
+  "authors": [
+    "Viktor Zavala <zavala.viktor@gmail.com>"
+  ],
+  "description": "Blog for shit and shit",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "angular": "^1.3.0",
-    "bootstrap-sass-official": "^3.2.0",
-    "angular-animate": "^1.3.0",
-    "angular-cookies": "^1.3.0",
-    "angular-resource": "^1.3.0",
-    "angular-route": "^1.3.0",
-    "angular-sanitize": "^1.3.0",
-    "angular-touch": "^1.3.0"
-  },
-  "devDependencies": {
-    "angular-mocks": "^1.3.0"
-  },
-  "appPath": "app",
-  "moduleName": "appApp",
-  "overrides": {
-    "bootstrap": {
-      "main": [
-        "less/bootstrap.less",
-        "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
-      ]
-    }
+    "angular": "~1.4.6",
+    "bootstrap": "~3.3.5",
+    "bootstrap-css": "~3.3.4"
   }
 }

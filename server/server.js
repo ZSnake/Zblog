@@ -10,10 +10,16 @@ server.register(require('inert'), function(err){
 	// Add the route
 	server.route({
 	    method: 'GET',
-	    path: '/',
-	    handler: function (request, reply) {
-	        reply.file('../client/app/index.html');
-	    }
+		path: '/{param*}',
+		handler: {
+			directory: {
+				path: ['../client/app', '../client/bower_components']
+
+			}
+		},
+		config: {
+			auth: false
+		}
 	});
 
 	// Start the server
