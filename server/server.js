@@ -9,6 +9,7 @@ server.connection({
     port: 8000,
 });
 
+mongoose.connect('mongodb://localhost/Zblog');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function callback() {
