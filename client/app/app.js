@@ -1,7 +1,9 @@
-angular.module('Zblog', ['ui.router', 'angular-moment'])
+var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers']);
  
-// Declared route 
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+angular.module('Zblog.Controllers', []);
+angular.module('Zblog.Services', []);
+
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('home');
 	$stateProvider
         .state('home', {
