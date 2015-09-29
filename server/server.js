@@ -1,49 +1,25 @@
-var Hapi = require('hapi');
+var hapi = require('hapi');
 var mongoose = require('mongoose');
-var Post = require('./schemas/post');
-
+var inert = require('inert');
+var routes = require('./routes');
 // Create a server with a host and port
-var server = new Hapi.Server();
+var server = new hapi.Server();
 server.connection({ 
     host: 'localhost', 
-    port: 8000 
+    port: 8000,
 });
 
-server.register(require('inert'), function(err){
-	// Add the route
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function callback() {
+    console.log("Connection with database succeeded.");
+});
 
-	mongoose.connect('mongodb://localhost/Zblog');
-	server.route([{
-		    method: 'POST',
-			path: '/api/post',
-			handler: function(request, reply){
-				console.log(request.payload.post)
-				var newPost = new Post({
-					title: request.payload.title,
-					subtitle: request.payload.subtitle,
-					body: request.payload.body,
-					date: request.payload.date,
-					author: request.payload.author
-				})
-			}
-		},
-		{
-		    method: 'GET',
-			path: '/{param*}',
-			handler: {
-				directory: {
-					path: ['../client/app', '../client/bower_components']
+server.register(inert, function(err){
 	
-				}
-			},
-			config: {
-				auth: false
-			}
-		}
-		]);
-
-
+	server.route(routes.endpoints);
 	// Start the server
+
 	server.start(function () {
 	    console.log('Server running at:', server.info.uri);
 	});
