@@ -27,3 +27,16 @@ exports.getAll = {
 		});
 	}
 };
+
+exports.getById = {
+	handler: function(request, reply){
+		var postId = request.params.id;
+		post.find({_id: postId}, function(err, post){
+			if(!err){
+				reply(post);
+			}else{
+				console.log('aww yiss, dis is an error: ' + error);
+			};
+		});
+	}
+};

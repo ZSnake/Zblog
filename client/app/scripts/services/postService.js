@@ -6,6 +6,9 @@ angular.module('Zblog.Services').factory('postService', ['$http',
 	        },
 	        CreatePost: function(payload){
 	        	return $http.post("/api/post", payload);
+	        },
+	        GetById: function(id){
+	        	return $http.get("/api/posts/" + id);
 	        }
 	    };  
 }]);

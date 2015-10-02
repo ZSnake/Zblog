@@ -54,16 +54,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a ui-sref="home">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
+                        <a ui-sref="newPost">Write a post</a>
                     </li>
                 </ul>
             </div>
@@ -145,6 +139,8 @@
     <script src="/rangy/rangy-serializer.js"></script>
     <script src="/rangy/rangy-textrange.js"></script>
     <script src="/angular-animate/angular-animate.js"></script>
+    <script src="/underscore/underscore.js"></script>
+    <script src="/angular-underscore-module/angular-underscore-module.js"></script>
     <script src="/angular-momentjs/angular-momentjs.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/textAngular/dist/textAngular.js"></script>
@@ -156,6 +152,7 @@
     <!-- inject:js -->
     <script src="scripts/controllers/HomeController.js"></script>
     <script src="scripts/controllers/NewPostController.js"></script>
+    <script src="scripts/controllers/ViewPostController.js"></script>
     <script src="scripts/services/postService.js"></script>
     <script src="scripts/clean-blog.min.js"></script>
     <!-- endinject -->

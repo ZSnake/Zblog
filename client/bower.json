@@ -23,6 +23,8 @@
     "bootstrap-css": "~3.3.4",
     "moment": "~2.10.6",
     "textAngular": "~1.4.6",
-    "AngularJS-Toaster": "angularjs-toaster#~0.4.15"
+    "AngularJS-Toaster": "angularjs-toaster#~0.4.15",
+    "underscore": "~1.8.3",
+    "angular-underscore-module": "~1.0.1"
   }
 }
