@@ -1,11 +1,11 @@
 angular.module('Zblog.Controllers')
-  .controller('HomeController', ['$scope', '$moment', '$state', 'postService', function ($scope, $moment, $state, postService) {
+  .controller('HomeController', ['$scope', '$moment', '$state', 'postService', 'toaster', function ($scope, $moment, $state, postService, toaster) {
     	$scope.posts = {};
     	postService.GetAll().then(function(posts){
     		$scope.posts = posts.data;
-            
+
     	}).catch(function(err){
-    		alert("Something really motherfucking bad happened, bruh: " + err);
+    		toaster.pop('error', 'Oh noes!', 'We had trouble getting your posts. Heres the error: ' + err);
     	});
 
     	$scope.CreatePost = function(){
