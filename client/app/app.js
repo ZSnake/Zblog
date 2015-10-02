@@ -1,4 +1,4 @@
-var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers']);
+var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers', 'textAngular']);
  
 angular.module('Zblog.Controllers', []);
 angular.module('Zblog.Services', []);
@@ -11,4 +11,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: 'views/home.html',
             controller: 'HomeController'
         })
+        .state('newPost', {
+        	url: '/posts/new',
+        	templateUrl: 'views/newPost.html',
+        	controller: 'NewPostController'
+        });
 }])
