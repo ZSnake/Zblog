@@ -11,7 +11,9 @@
                 <label for="subtitle">Subtitle:</label>
                 <input type="text" class="form-control" id="subtitle" ng-model="post.subtitle">
             </div>
-            <text-angular ng-model="post.content"></text-angular>
+            <div class="form-group">
+                <text-angular ng-model="post.content"></text-angular>
+            </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg" ng-click="CreatePost()">Submit</button>
             </div>

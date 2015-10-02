@@ -3,6 +3,7 @@ angular.module('Zblog.Controllers')
     	$scope.posts = {};
     	postService.GetAll().then(function(posts){
     		$scope.posts = posts.data;
+            
     	}).catch(function(err){
     		alert("Something really motherfucking bad happened, bruh: " + err);
     	});

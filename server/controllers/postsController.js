@@ -19,11 +19,10 @@ exports.getAll = {
 	handler: function(request, reply){
 		post.find({}, function(err, posts){
 			if(!err){
-				console.log('its getting without error nigga')
+				console.log('its getting without error nigga');
 				reply(posts);
 			}else{
 				console.log('aww yiss, dis is an error: ' + error);
-				reply("This is an error MOTHERFUCKER");
 			};
 		});
 	}

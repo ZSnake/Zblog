@@ -4,5 +4,8 @@ angular.module('Zblog.Services').factory('postService', ['$http',
 	        GetAll: function () {
 	            return $http.get("/api/posts");            
 	        },
+	        CreatePost: function(payload){
+	        	return $http.post("/api/post", payload);
+	        }
 	    };  
 }]);

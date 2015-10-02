@@ -4,7 +4,7 @@ angular.module('Zblog.Controllers')
     	$scope.post = {};
 
     	$scope.CreatePost = function(){
-    		console.log($scope.post.content);
+    		postService.CreatePost({title: $scope.post.title, subtitle: $scope.post.subtitle, content: $scope.post.content, author: 'Zsnake', date:new Date()})
     	}
 
   }]);
