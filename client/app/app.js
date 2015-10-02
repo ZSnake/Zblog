@@ -1,4 +1,4 @@
-var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers', 'textAngular', 'toaster', 'ngAnimate', 'underscore']);
+var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers', 'textAngular', 'toaster', 'ngAnimate', 'infinite-scroll']);
  
 angular.module('Zblog.Controllers', []);
 angular.module('Zblog.Services', []);
