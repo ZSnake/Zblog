@@ -11,14 +11,28 @@
                             {{post.subtitle}}
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">{{post.author}}</a> on {{post.date}}</p>
+                    <div class="row">
+                      <div class="col-md-1">
+                          <span class="editButtonContainer ">
+                              <i class="fa fa-pencil fa-lg"></i>
+                          </span>
+                          <span class="deleteButtonContainer ">
+                              <i class="fa fa-trash-o fa-lg"></i>
+                          </span>
+                      </div>
+                      <div class="col-md-10 authorContainer">
+                        <p class="align-left">Posted by {{post.author}} {{post.date}}</p>
+                      </div>
+
+                    </div>
+
                 </div>
                 <hr>
             </div>
             <!-- Pager -->
             <ul class="pager">
                 <li>
-                    <button type="button" class="btn btn-primary btn-lg" ng-click="CreatePost()">New Post</button>
+                    <button type="button" class="btn btn-primary btn-lg" ui-sref='newPost'>New Post</button>
                 </li>
             </ul>
         </div>
