@@ -48,10 +48,19 @@ exports.editPost = {
 			body: request.payload.body,
 			date: request.payload.date,
 			author: request.payload.author
-		}, {upsert: true}, function(err){
+		}, function(err){
 			if(err)
 				console.log("error: " + err)
 		});
 		return reply('ok');
+	}
+};
+
+exports.removePost = {
+	handler: function(request, reply){
+		post.remove({_id: request.params.id}, function(err){
+			if(err)
+				console.log("error: " + err);
+		});
 	}
 };

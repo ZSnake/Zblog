@@ -16,7 +16,8 @@
                           <span class="editButtonContainer" ui-sref='editPost({postId: post._id})'>
                               <i class="fa fa-pencil fa-lg"></i>
                           </span>
-                          <span class="deleteButtonContainer ">
+                          <span class="deleteButtonContainer" ng-bootbox-confirm="Are you sure you want to confirm this?"
+                                                              ng-bootbox-confirm-action="deletePost(post._id)">
                               <i class="fa fa-trash-o fa-lg"></i>
                           </span>
                       </div>

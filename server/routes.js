@@ -5,4 +5,5 @@ exports.endpoints = [{method: 'GET', path: '/{param*}', config: homeController.h
 					 {method: 'POST', path: '/api/post', config: postsController.newPost},
 					 {method: 'GET', path: '/api/posts', config: postsController.getAll},
 					 {method: 'GET', path: '/api/posts/{id}', config: postsController.getById},
-				 	 {method: 'PUT', path: '/api/posts/{id}', config: postsController.editPost}];
+				 	 {method: 'PUT', path: '/api/posts/{id}', config: postsController.editPost},
+				 	 {method: 'DELETE', path: '/api/posts/{id}', config: postsController.removePost}];
