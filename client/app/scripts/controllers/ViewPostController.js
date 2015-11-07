@@ -3,6 +3,7 @@ angular.module('Zblog.Controllers')
     	$scope.post = {};
         postService.GetById($stateParams.postId).then(function(response){
             $scope.post = response.data[0];
+            $scope.post.date = $moment($scope.post.date).fromNow()
             toaster.pop('success', 'Great success!', 'Post retrieved successfully!');
         }).catch(function(err){
             toaster.pop('error', 'oh noes!', 'We had a problem retrieving your post. Heres the error: ' + err);
