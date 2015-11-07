@@ -2,13 +2,16 @@ angular.module('Zblog.Services').factory('postService', ['$http',
 	function($http){
 		return {
 	        GetAll: function () {
-	            return $http.get("/api/posts");            
+	            return $http.get("/api/posts");
 	        },
 	        CreatePost: function(payload){
 	        	return $http.post("/api/post", payload);
 	        },
 	        GetById: function(id){
 	        	return $http.get("/api/posts/" + id);
-	        }
-	    };  
+	        },
+					EditPost: function(id, payload){
+						return $http.put("/api/posts/" + id, payload);
+					}
+	    };
 }]);

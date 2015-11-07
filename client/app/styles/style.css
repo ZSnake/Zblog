@@ -1,9 +1,11 @@
 .editButtonContainer{
 	color: #3E5589;
+	cursor: pointer;
 }
 
 .deleteButtonContainer{
 	color:#993A3A;
+	cursor: pointer;
 }
 
 .authorContainer{

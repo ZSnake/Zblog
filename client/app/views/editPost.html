@@ -1,0 +1,22 @@
+<div ng-controller="EditPostController">
+    <div class="row">
+        <form role="form">
+            <div class="row">
+                <div class="form-group col-sm-6" >
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" ng-model="post.title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subtitle">Subtitle:</label>
+                <input type="text" class="form-control" id="subtitle" ng-model="post.subtitle">
+            </div>
+            <div class="form-group">
+                <text-angular ng-model="post.body"></text-angular>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg" ng-click="EditPost()">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

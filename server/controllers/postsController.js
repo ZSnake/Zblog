@@ -9,9 +9,9 @@ exports.newPost = {
 			date: request.payload.date,
 			author: request.payload.author
 		});
-		newPost.save();					
+		newPost.save();
 		console.log('post saved');
-		return reply('It worked, mofo!');
+		return reply('ok');
 	}
 };
 
@@ -19,7 +19,6 @@ exports.getAll = {
 	handler: function(request, reply){
 		post.find({}, function(err, posts){
 			if(!err){
-				console.log('its getting without error nigga');
 				reply(posts);
 			}else{
 				console.log('aww yiss, dis is an error: ' + error);
@@ -35,8 +34,24 @@ exports.getById = {
 			if(!err){
 				reply(post);
 			}else{
-				console.log('aww yiss, dis is an error: ' + error);
+				console.log('aww yiss, dis is an error: ' + err);
 			};
 		});
+	}
+};
+
+exports.editPost = {
+	handler: function(request, reply){
+		post.update({_id: request.params.id}, {
+			title: request.payload.title,
+			subtitle: request.payload.subtitle,
+			body: request.payload.body,
+			date: request.payload.date,
+			author: request.payload.author
+		}, {upsert: true}, function(err){
+			if(err)
+				console.log("error: " + err)
+		});
+		return reply('ok');
 	}
 };

@@ -12,5 +12,5 @@ angular.module('Zblog.Controllers')
     			toaster.pop('error', 'Error.', 'Post creation failed. Error: ' + error);
     		})
     	}
-
+      
   }]);

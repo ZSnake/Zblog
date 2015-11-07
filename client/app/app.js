@@ -1,5 +1,5 @@
 var app = angular.module('Zblog', ['ui.router', 'angular-moment', 'Zblog.Services', 'Zblog.Controllers', 'textAngular', 'toaster', 'ngAnimate', 'infinite-scroll']);
- 
+
 angular.module('Zblog.Controllers', []);
 angular.module('Zblog.Services', []);
 
@@ -20,5 +20,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url: '/posts/{postId}',
             templateUrl: 'views/post.html',
             controller: 'ViewPostController'
+        })
+        .state('editPost', {
+          url: '/posts/edit/{postId}',
+          templateUrl: 'views/editPost.html',
+          controller: 'EditPostController'
         });
 }])
