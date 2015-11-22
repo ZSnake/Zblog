@@ -9,9 +9,12 @@
   "author": "Viktor Zavala",
   "license": "MIT",
   "dependencies": {
+    "boom": "^3.0.0",
     "hapi": "^10.0.0",
+    "hapi-auth-cookie": "^3.1.0",
     "hapi-mongodb": "^3.0.0",
-    "inert": "^3.0.1"
+    "inert": "^3.0.1",
+    "joi": "^7.0.0"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5",

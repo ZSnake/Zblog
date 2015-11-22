@@ -1,6 +1,9 @@
 var post = require('../schemas/post');
 
 exports.newPost = {
+	auth: {
+    strategy: 'base'
+  },
 	handler: function(request, reply){
 		var newPost = new post({
 			title: request.payload.title,
@@ -16,6 +19,9 @@ exports.newPost = {
 };
 
 exports.getAll = {
+	auth: {
+    strategy: 'base'
+  },
 	handler: function(request, reply){
 		post.find({}, function(err, posts){
 			if(!err){
@@ -28,6 +34,9 @@ exports.getAll = {
 };
 
 exports.getById = {
+	auth: {
+    strategy: 'base'
+  },
 	handler: function(request, reply){
 		var postId = request.params.id;
 		post.find({_id: postId}, function(err, post){
@@ -41,6 +50,9 @@ exports.getById = {
 };
 
 exports.editPost = {
+	auth: {
+    strategy: 'base'
+  },
 	handler: function(request, reply){
 		post.update({_id: request.params.id}, {
 			title: request.payload.title,
@@ -57,6 +69,9 @@ exports.editPost = {
 };
 
 exports.removePost = {
+	auth: {
+    strategy: 'base'
+  },
 	handler: function(request, reply){
 		post.remove({_id: request.params.id}, function(err){
 			if(err)
