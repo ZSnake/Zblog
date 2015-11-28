@@ -20,15 +20,11 @@ db.once('open', function callback() {
 
 server.register([inert, auth], function(err){
 
-  server.auth.strategy('base', 'cookie', {
+  server.auth.strategy('session', 'cookie', {
     password: 'supersecretpassword', // cookie secret
     cookie: 'app-cookie', // Cookie name
     ttl: 24 * 60 * 60 * 1000 // Set session to 1 day
   });
-
-  // server.auth.default({
-  //   strategy: 'base'
-  // });
 
 	server.route(routes.endpoints);
 	// Start the server
