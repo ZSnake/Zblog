@@ -23,7 +23,8 @@ server.register([inert, auth], function(err){
   server.auth.strategy('session', 'cookie', {
     password: 'supersecretpassword', // cookie secret
     cookie: 'app-cookie', // Cookie name
-    ttl: 24 * 60 * 60 * 1000 // Set session to 1 day
+    ttl: 24 * 60 * 60 * 1000, // Set session to 1 day,
+    isSecure: false
   });
 
 	server.route(routes.endpoints);
